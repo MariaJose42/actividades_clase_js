@@ -1,0 +1,38 @@
+<h1>Suma números:</h1>
+
+Número 1 : <input type="number" id="num1">
+<br>
+Número 2 : <input type="number" id="num2">
+<br>
+<input type="button" value="Sumar" onclick="obtenerValores()" id="botonId">
+
+<span id="positivo"></span>
+<span id="negativo"></span>
+<script>
+function obtenerValores() {
+
+var num_1= document.getElementById("num1").value;
+var num_2= document.getElementById("num2").value;
+var total= parseInt(num_1) + parseInt(num_2);
+
+if(total>=0){
+document.getElementById("negativo").innerHTML=""
+	document.getElementById("positivo").innerHTML = "El resultado es : "+ total;
+    
+}else if(total<0){
+document.getElementById("positivo").innerHTML=""
+	document.getElementById("negativo").innerHTML = "El resultado es : "+ total;
+}
+
+</script>
+
+<style>
+h1{
+	color:red;}
+#positivo{
+ color:green}
+ 
+#negativo{
+ color:red}
+
+</style>
